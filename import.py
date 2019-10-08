@@ -65,7 +65,7 @@ def init_loop_state(file_counter=0):
     return (file_row_counter, file_counter, file_data)
 
 def main():
-    user_site_export_path = './JonathanHanson/user-site-export/'
+    user_site_export_path = './SomeUserName/user-site-export/'
 
     (file_row_counter, file_counter, file_data) = init_loop_state()
 
