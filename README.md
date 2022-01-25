@@ -14,16 +14,13 @@ This will take some time depending on the amount of data they have.  You can wat
 ## Generate Withings Uploadable CSV files
 Once you've got the `MyFitbitData.zip` file from Fitbit, clone this repository to a working directory somewhere, and copy the fitbit .zip file into it.  Unzip the archive, and you should have a directory something like `SomeUserName`.
 
-Edit `generate_csv_files.py`, and find line 68:
-``` python
-user_site_export_path = './SomeUserName/user-site-export/'
-```
-
-This path should be edited to point to the archive you just unzipped.  Basically, edit the username to match your archive's path structure.
-
 Run the script (this contacts no external services, and is safe to run):
 ``` sh
-./generate_csv_files.py
+./generate_csv_files.py <path_to_folder_with_fitbit_files>
+```
+Example:
+```
+./generate_csv_files.py "DennisHo/Personal & Account/"
 ```
 
 This will cull through the downloaded Fitbit archive data, pull out your weight data, and reorganize it into a set of `weight_dataN.csv` files, which it creates in the same directory as the script ran.  Note that it creates several instead of one, because Withings states a 300 line maximum per file.

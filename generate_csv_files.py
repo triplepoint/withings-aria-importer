@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 
+import argparse
 import csv
 import json
 from os import listdir
@@ -65,7 +66,11 @@ def init_loop_state(file_counter=0):
     return (file_row_counter, file_counter, file_data)
 
 def main():
-    user_site_export_path = './SomeUserName/user-site-export/'
+    parser = argparse.ArgumentParser()
+    parser.add_argument('path', help='path to folder containing fitbit data to convert')
+    args = parser.parse_args()
+
+    user_site_export_path = args.path
 
     (file_row_counter, file_counter, file_data) = init_loop_state()
 
