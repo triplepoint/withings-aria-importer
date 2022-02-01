@@ -20,7 +20,7 @@ Run the script (this contacts no external services, and is safe to run):
 ```
 Example:
 ```
-./generate_csv_files.py "DennisHo/Personal & Account/"
+./generate_csv_files.py "./SomeUserName/user-site-export/"
 ```
 
 This will cull through the downloaded Fitbit archive data, pull out your weight data, and reorganize it into a set of `weight_dataN.csv` files, which it creates in the same directory as the script ran.  Note that it creates several instead of one, because Withings states a 300 line maximum per file.
