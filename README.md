@@ -26,7 +26,7 @@ Example:
 This will cull through the downloaded Fitbit archive data, pull out your weight data, and reorganize it into a set of `weight_dataN.csv` files, which it creates in the same directory as the script ran.  Note that it creates several instead of one, because Withings states a 300 line maximum per file.
 
 ## Upload the CSV files to Withings
-Log into [the Health Mate dashboard](healthmate.withings.com).
+Log into [the Health Mate dashboard](https://healthmate.withings.com).
 
 Click your "Account" in the top right hand corner, click "settings", and then click your user icon to bring up your user preferences.
 
